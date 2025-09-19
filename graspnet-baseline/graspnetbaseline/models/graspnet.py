@@ -15,9 +15,9 @@ import torch.nn.functional as F
 # sys.path.append(os.path.join(ROOT_DIR, 'pointnet2'))
 # sys.path.append(os.path.join(ROOT_DIR, 'utils'))
 
-from models.backbone import Pointnet2Backbone
-from models.modules import ApproachNet, CloudCrop, OperationNet, ToleranceNet
-from models.loss import get_loss
+from .backbone import Pointnet2Backbone
+from .modules import ApproachNet, CloudCrop, OperationNet, ToleranceNet
+from .loss import get_loss
 from utils.loss_utils import GRASP_MAX_WIDTH, GRASP_MAX_TOLERANCE
 from utils.label_generation import process_grasp_labels, match_grasp_view_and_label, batch_viewpoint_params_to_matrix
 

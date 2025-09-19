@@ -26,8 +26,9 @@ cd ../graspnet-baseline
 pip install .
 ```
 # 使用
+```
 export XDG_SESSION_TYPE=x11
 python demo.py --checkpoint_path logs/log_kn/checkpoint.tar
-
+```
 # 参考
 - https://github.com/H-Freax/GraspNet_Pointnet2_PyTorch1.13.1?tab=readme-ov-file#usage

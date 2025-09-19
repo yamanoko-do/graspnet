@@ -3,7 +3,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import glob
 from setuptools import find_packages, setup
@@ -21,10 +21,11 @@ requirements = ["torch>=1.4"]
 # os.environ["TORCH_CUDA_ARCH_LIST"] = "5.0;6.0;6.1;6.2;7.0;7.5;8.0;8.6;8.7;8.9;9.0"
 setup(
     name='pointnet22',
+    version=__version__,
+    packages=find_packages(),
     ext_modules=[
         CUDAExtension(
             name='pointnet22._ext',
-            version=__version__,
             sources=_ext_sources,
             extra_compile_args={
                 "cxx": ["-O2", "-I{}".format("{}/{}/include".format(ROOT, _ext_src_root))],
