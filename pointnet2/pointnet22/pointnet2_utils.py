@@ -14,7 +14,7 @@ from __future__ import (
 import torch
 from torch.autograd import Function
 import torch.nn as nn
-import pointnet2.pointnet22.pytorch_utils as pt_utils
+import pointnet22.pytorch_utils as pt_utils
 import sys
 
 try:
